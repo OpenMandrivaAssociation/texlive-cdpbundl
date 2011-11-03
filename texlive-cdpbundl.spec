@@ -1,3 +1,9 @@
+# revision 15878
+# category Package
+# catalog-ctan /macros/latex/contrib/cdpbundl
+# catalog-date 2007-01-31 23:04:11 +0100
+# catalog-license lppl
+# catalog-version 0.34
 Name:		texlive-cdpbundl
 Version:	0.34
 Release:	1
@@ -61,6 +67,7 @@ etc., independant from the other ones.
 #- source
 %doc %{_texmfdistdir}/source/latex/cdpbundl/cdpbundl.dtx
 %doc %{_texmfdistdir}/source/latex/cdpbundl/cdpbundl.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -71,3 +78,5 @@ etc., independant from the other ones.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
