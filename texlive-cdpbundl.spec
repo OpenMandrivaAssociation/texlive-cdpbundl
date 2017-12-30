@@ -1,12 +1,6 @@
-# revision 15878
-# category Package
-# catalog-ctan /macros/latex/contrib/cdpbundl
-# catalog-date 2007-01-31 23:04:11 +0100
-# catalog-license lppl
-# catalog-version 0.34
 Name:		texlive-cdpbundl
-Version:	0.34
-Release:	10
+Version:	0.36
+Release:	1
 Summary:	Business letters in the Italian style
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/cdpbundl
@@ -41,22 +35,10 @@ etc., independant from the other ones.
 
 #-----------------------------------------------------------------------
 %files
-%{_texmfdistdir}/tex/latex/cdpbundl/adiseal.sty
-%{_texmfdistdir}/tex/latex/cdpbundl/articoletteracdp.cls
-%{_texmfdistdir}/tex/latex/cdpbundl/cdpaddon.sty
-%{_texmfdistdir}/tex/latex/cdpbundl/cdpshues-example.def
-%{_texmfdistdir}/tex/latex/cdpbundl/cdpshues.cfg
-%{_texmfdistdir}/tex/latex/cdpbundl/epson-stylus-740.def
-%{_texmfdistdir}/tex/latex/cdpbundl/hp-laserjet-4500.def
-%{_texmfdistdir}/tex/latex/cdpbundl/lettcdpadi.cls
-%{_texmfdistdir}/tex/latex/cdpbundl/letteracdp.cls
-%doc %{_texmfdistdir}/doc/latex/cdpbundl/00readme.txt
-%doc %{_texmfdistdir}/doc/latex/cdpbundl/README
-%doc %{_texmfdistdir}/doc/latex/cdpbundl/manifest.txt
-%doc %{_texmfdistdir}/doc/latex/cdpbundl/overview.pdf
+%{_texmfdistdir}/tex/latex/cdpbundl
+%doc %{_texmfdistdir}/doc/latex/cdpbundl
 #- source
-%doc %{_texmfdistdir}/source/latex/cdpbundl/cdpbundl.dtx
-%doc %{_texmfdistdir}/source/latex/cdpbundl/cdpbundl.ins
+%doc %{_texmfdistdir}/source/latex/cdpbundl
 
 #-----------------------------------------------------------------------
 %prep
@@ -67,18 +49,3 @@ etc., independant from the other ones.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.34-2
-+ Revision: 750047
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 0.34-1
-+ Revision: 718024
-- texlive-cdpbundl
-- texlive-cdpbundl
-- texlive-cdpbundl
-- texlive-cdpbundl
-- texlive-cdpbundl
-
