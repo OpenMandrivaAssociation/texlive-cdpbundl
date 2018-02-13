@@ -1,5 +1,5 @@
 Name:		texlive-cdpbundl
-Version:	0.36
+Version:	0.36d
 Release:	1
 Summary:	Business letters in the Italian style
 Group:		Publishing
