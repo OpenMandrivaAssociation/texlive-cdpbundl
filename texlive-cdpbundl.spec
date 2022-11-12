@@ -1,13 +1,13 @@
 Name:		texlive-cdpbundl
-Version:	0.36d
-Release:	2
+Version:	61719
+Release:	1
 Summary:	Business letters in the Italian style
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/cdpbundl
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cdpbundl.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cdpbundl.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cdpbundl.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cdpbundl.r61719.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cdpbundl.doc.r61719.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cdpbundl.source.r61719.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -26,12 +26,12 @@ letters, and each letter will have its own table of contents,
 etc., independant from the other ones.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -42,7 +42,8 @@ etc., independant from the other ones.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
