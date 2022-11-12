@@ -5,9 +5,9 @@ Summary:	Business letters in the Italian style
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/cdpbundl
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cdpbundl.r61719.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cdpbundl.doc.r61719.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cdpbundl.source.r61719.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cdpbundl.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cdpbundl.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cdpbundl.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
