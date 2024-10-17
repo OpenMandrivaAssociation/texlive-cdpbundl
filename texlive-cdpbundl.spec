@@ -3,7 +3,7 @@ Version:	61719
 Release:	2
 Summary:	Business letters in the Italian style
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/cdpbundl
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/cdpbundl
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cdpbundl.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cdpbundl.doc.r%{version}.tar.xz
