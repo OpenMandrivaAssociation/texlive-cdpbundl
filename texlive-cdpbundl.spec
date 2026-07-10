@@ -1,52 +1,31 @@
-Name:		texlive-cdpbundl
-Version:	61719
-Release:	2
+%global tl_name cdpbundl
+%global tl_revision 79618
+
+Name:		texlive-%{tl_name}
+Epoch:		1
+Version:	0.36d
+Release:	%{tl_revision}.1
 Summary:	Business letters in the Italian style
 Group:		Publishing
 URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/cdpbundl
-License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cdpbundl.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cdpbundl.doc.r%{version}.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cdpbundl.source.r%{version}.tar.xz
+License:	lppl1.3
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/cdpbundl.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/cdpbundl.doc.r%{tl_revision}.tar.xz
+Source2:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/cdpbundl.source.r%{tl_revision}.tar.xz
 BuildArch:	noarch
+BuildSystem:	texlive
 BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+%texlive_base_requires
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-The C.D.P. Bundle can be used to typeset high-quality business
-letters formatted according to Italian style conventions. It is
-highly configurable, and its modular structure provides you
-with building blocks of increasing level, by means of which you
-can compose a large variety of letters. It is also possible to
-write letters divided into sections and paragraphs, to include
-floating figures and tables, and to have the relevant indexes
-compiled automatically. A single input file can contain several
-letters, and each letter will have its own table of contents,
-etc., independant from the other ones.
+The C.D.P. Bundle can be used to typeset high-quality business letters
+formatted according to Italian style conventions. It is highly
+configurable, and its modular structure provides you with building
+blocks of increasing level, by means of which you can compose a large
+variety of letters. It is also possible to write letters divided into
+sections and paragraphs, to include floating figures and tables, and to
+have the relevant indexes compiled automatically. A single input file
+can contain several letters, and each letter will have its own table of
+contents, etc., independent from the other ones.
 
-%post
-%{_sbindir}/texlive.post
-
-%postun
-if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-fi
-
-#-----------------------------------------------------------------------
-%files
-%{_texmfdistdir}/tex/latex/cdpbundl
-%doc %{_texmfdistdir}/doc/latex/cdpbundl
-#- source
-%doc %{_texmfdistdir}/source/latex/cdpbundl
-
-#-----------------------------------------------------------------------
-%prep
-%setup -c -a1 -a2
-%autopatch -p1
-
-%build
-
-%install
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
